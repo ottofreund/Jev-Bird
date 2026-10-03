@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=65", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "jev-bird"
+version = "0.1.0"
+description = "An AI-controlled Flappy Bird experiment with latency-aware decision review."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "pygame>=2.6,<3",
+    "typesafe-sdk>=0.7,<1",
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Games/Entertainment :: Arcade",
+]
+
+[project.scripts]
+jev-bird = "jev_bird.main:main"
+
+[tool.setuptools.packages.find]
+include = ["jev_bird*"]
